@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <div class="balance-section">
+            <h1>Expense Tracker</h1>
+            <p id="balance">Your Balance: Rs 0.00</p>
+        </div>
+
+<img src="pic1.jpg" alt="">
+<img src="pic3.jpg" alt="">
+        <div id="earningsSection" class="transaction-section">
+            <h2>Earnings</h2>
+            <form id="earningsForm">
+                <label for="incomeSource">Source of Income:</label>
+                <input type="text" id="incomeSource" required>
+        
+                <label for="incomeAmount">Amount:</label>
+                <input type="number" id="incomeAmount" required>
+        
+                <label for="incomeDate">Date:</label>
+                <input type="date" id="incomeDate" max="2024-12-31" required>
+        
+                <button type="button" class="green-button" onclick="addEarnings()">Add Earnings</button>
+            </form>
+        </div>
+        
+        <div id="expensesSection" class="transaction-section">
+            <h2>Expenses</h2>
+            <form id="expensesForm">
+                <label for="expenseCategory">Expense Category:</label>
+                <select id="expenseCategory" required>
+                    <option disabled selected>Select category</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Mortgage">Mortgage</option>
+                    <option value="Property Taxes">Property Taxes</option>
+                    <option value="Home Insurance">Home Insurance</option>
+                    <option value="Electricity">Electricity</option>
+                    <option value="Water">Water</option>
+                    <option value="Gas">Gas</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Phone">Phone</option>
+                    <option value="Fuel">Fuel</option>
+                    <option value="Public Transport">Public Transport</option>
+                    <option value="Car Insurance">Car Insurance</option>
+                    <option value="Maintenance">Maintenance</option>
+                    <option value="Groceries">Groceries</option>
+                    <option value="Dining Out">Dining Out</option>
+                    <option value="Takeout">Takeout</option>
+                    <option value="Movies">Movies</option>
+                    <option value="Concerts">Concerts</option>
+                    <option value="Hobbies">Hobbies</option>
+                    <option value="Streaming Services">Streaming Services</option>
+                    <option value="Medical Bills">Medical Bills</option>
+                    <option value="Insurance">Insurance</option>
+                    <option value="Prescriptions">Prescriptions</option>
+                    <option value="Tuition">Tuition</option>
+                    <option value="Books">Books</option>
+                    <option value="Supplies">Supplies</option>
+                    <option value="Courses">Courses</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Grooming">Grooming</option>
+                    <option value="Fitness">Fitness</option>
+                    <option value="Loan Repayments">Loan Repayments</option>
+                    <option value="Credit Card Payments">Credit Card Payments</option>
+                    <option value="Gifts">Gifts</option>
+                    <option value="Donations">Donations</option>
+                    <option value="Other">Other</option>
+                </select>
+        
+                <label for="expenseAmount">Amount:</label>
+                <input type="number" id="expenseAmount" required>
+        
+                <label for="expenseDate">Date:</label>
+                <input type="date" id="expenseDate" required>
+        
+                <button type="button" class="red-button" onclick="addExpense()">Add Expense</button>
+            </form>
+        </div>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const currentDate = new Date();
+                const maxDateIncome =   currentDate.toISOString().split('T')[0];
+                // const maxDateIncome = new Date('2024-12-31').toISOString().split('T')[0];
+                const maxDateExpense = currentDate.toISOString().split('T')[0];
+                
+                document.getElementById('incomeDate').setAttribute('max', maxDateIncome);
+                document.getElementById('expenseDate').setAttribute('max', maxDateExpense);
+            });
+        </script>
+        
+<img src="pic4.jpg" alt="">
+        <!-- Display Transactions -->
+        <div id="recordsSection" class="transaction-list">
+            <h2>Records</h2>
+            <div id="transactionList"></div>
+        </div>
+
+        <!-- Budgeting Section -->
+        <div id="budgetSection" class="transaction-section">
+            <h2>Budgeting</h2>
+            <form id="budgetForm">
+                <label for="budgetAmount">For Next Monthly Budget:</label>
+                <input type="number" id="budgetAmount" required>
+
+                <button type="button" class="blue-button" onclick="setBudget()">Set Budget</button>
+            </form>
+        </div>
+       
+<!-- Recommendation Section -->
+<div id="recommendationSection" class="transaction-section">
+    <h2>Recommendations</h2>
+    <div id="recommendations"></div>
+</div>
+<!-- <canvas id="categoryChart"></canvas> -->
+
+<!-- <canvas id="earningsChart"></canvas> -->
+
+<!-- <img src="pic4.jpg" alt=""> -->
+<img src="pic5k.jpg" alt="">
+      
+            <div id="chartsSection">
+                <h2>Analysis</h2>
+                <canvas id="categoryPieChart" width="400" height="400"></canvas>
+            </div>
+
+
+            <canvas id="earningsChart" width="400" height="200"></canvas>
+
+
+
+            <p id="totalPercentage"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</body>
+</html>

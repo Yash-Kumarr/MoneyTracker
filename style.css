@@ -1,0 +1,139 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto; /* Center the container */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.balance-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#balance {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 0;
+}
+
+.transaction-section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.green-button {
+    background-color: #4caf50;
+}
+
+.red-button {
+    background-color: #FF5733;
+}
+
+.blue-button {
+    background-color: #3498db;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.transaction-list {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.earnings {
+    color: #4CAF50;
+}
+
+.expenses {
+    color: #FF5733;
+}
+
+#chartsSection {
+    text-align: center;
+    margin-top: 20px;
+}
+
+*
+{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: solid;
+    font-weight:500px;
+    
+    background-color:whitesmoke
+}
+
+#recordsSection
+{
+    background-image: url(rec.jpg);
+}
+#earningsChart
+{
+    background-image: url(rec2.jpg);
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    input, button {
+        padding: 8px;
+    }
+}
+.black-button {
+    background-color: rgba(242, 240, 240, 0.712);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-left: 5px; /* Adjust as needed */
+    cursor: pointer;
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.black-button:hover {
+    opacity: 0.8;
+}
